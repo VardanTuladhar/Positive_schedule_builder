@@ -19,9 +19,11 @@ todays_date.append("-");
 todays_date.append(todays_year);
 todays_date.append(".txt");
 ofstream schedule(todays_date);
-
 schedule.close();
-
+cout << "Hi whats your name"<< endl;
+string students_name;
+cin >> students_name;
+cout << "This student is " << students_name << endl; 
 
 
 }
