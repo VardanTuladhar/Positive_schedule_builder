@@ -4,6 +4,19 @@
 #include <string>
 using namespace std;
 
+class Student
+{
+	public:
+		string name;
+		string date;
+	Student(string x, string y)
+	{
+		name = x;
+		date = y;
+
+	}
+};
+
 int main()
 {
 time_t t =  time(0);
@@ -23,7 +36,15 @@ schedule.close();
 cout << "Hi whats your name"<< endl;
 string students_name;
 cin >> students_name;
-cout << "This student is " << students_name << endl; 
+if(!todays_date.empty())
+{
+	todays_date.resize(todays_date.size() - 4);
+}
 
+Student student1(students_name, todays_date);
+
+cout << "This student is " << student1.name << endl;
+
+cout << "The days date is " << student1.date << endl; 
 
 }
